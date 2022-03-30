@@ -10,7 +10,7 @@ app.use(cors());
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-room-flax.vercel.app/",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
