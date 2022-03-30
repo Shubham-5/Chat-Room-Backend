@@ -8,12 +8,7 @@ const app = express();
 const server = http.createServer(app);
 app.use(cors());
 
-const io = new Server(server, {
-  cors: {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"],
-  },
-});
+const io = new Server(server);
 
 io.on("connection", (socket) => {
   //checking a user connection
